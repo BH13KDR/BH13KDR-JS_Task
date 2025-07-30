@@ -1,0 +1,19 @@
+<body>
+    <h1 id="name"></h1>
+    <p id="what_animal"></p>
+    <p id="what_fruit"></p>
+
+    <script>
+        const nameElement = document.querySelector("#name");
+        let name = prompt("이름을 입력하세요");
+        nameElement.textContent = name;
+
+        const w_aniElement = document.querySelector("#what_animal");
+        let what_animal = prompt("무슨 동물을 좋아하시나요?");
+        w_aniElement.textContent = `좋아하는 동물은 ${what_animal}입니다.`;
+
+        const w_fruElement = document.querySelector("#what_fruit");
+        let what_fruit = prompt("무슨 과일을 좋아하세요?");
+        w_fruElement.textContent = `좋아하는 과일은 ${what_fruit}입니다.`;
+    </script>
+</body>
