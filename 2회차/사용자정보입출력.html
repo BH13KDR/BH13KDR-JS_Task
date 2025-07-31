@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 사용자정보입출력</title>
+  </head>
+  <body>
+    <h1>사용자 정보 출력하기</h1>
+    <div id="result"></div>
+
+    <script>
+      console.log("사용자의 정보를 수집합니다");
+
+      let name;
+      const notcollect = "수집안";
+
+      name = prompt("당신의 이름을 입력하세요:");
+
+      let message = `안녕하세요, ${name}님! 저희는 사실 당신의 정보를 ${notcollect}합니다.`;
+      console.log(message);
+
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = message;
+    </script>
+  </body>
+</html>
