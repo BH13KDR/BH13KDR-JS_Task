@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>나만의 채팅창</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .chat-container {
+        width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 채팅창 영역 */
+      .chat-window {
+        margin-top: 10px;
+        height: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        overflow-y: auto;
+        position: relative;
+      }
+
+      /* 말풍선 공통 */
+      .message {
+        max-width: 70%;
+        padding: 8px 10px;
+        border-radius: 10px;
+        margin: 5px 0;
+        position: relative;
+        word-break: break-word;
+      }
+
+      /* 왼쪽 말풍선 */
+      .message.other {
+        background: #eee;
+        float: left;
+        clear: both;
+      }
+
+      .message.other::after {
+        content: "";
+        position: absolute;
+        left: -6px;
+        top: 10px;
+        border: 6px solid transparent;
+        border-right-color: #eee;
+      }
+
+      /* 오른쪽 말풍선 */
+      .message.me {
+        background: #d1f5d3;
+        float: right;
+        clear: both;
+        z-index: 2;
+      }
+
+      .message.me::after {
+        content: "";
+        position: absolute;
+        right: -6px;
+        top: 10px;
+        border: 6px solid transparent;
+        border-left-color: #d1f5d3;
+      }
+
+      body {
+        background: #f0f2f5;
+      }
+      .chat-container {
+        width: 400px;
+        margin: 0 auto;
+        background: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <h1>나만의 채팅창</h1>
+
+      <div class="chat-window">
+        <div class="message other">안녕! 이건 채팅창 예시야.</div>
+        <div class="message me">안녕 예시야!</div>
+        <div class="message other">연습용으로 만들었어.</div>
+        <div class="message me">크아아악!</div>
+      </div>
+    </div>
+  </body>
+</html>
