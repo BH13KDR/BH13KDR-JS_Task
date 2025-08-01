@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 폼</title>
+    <link href="join.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <form id="form" action="#">
+        <table class="table">
+          <tr>
+            <th>아이디</th>
+            <td>
+              <input name="id" placeholder="아이디" />
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호</th>
+            <td>
+              <input type="password" name="pw1" placeholder="비밀번호" />
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호 확인</th>
+            <td>
+              <input type="password" name="pw2" placeholder="비밀번호" />
+            </td>
+          </tr>
+          <tr>
+            <th>전화번호</th>
+            <td>
+              <input name="phone" placeholder="전화번호" />
+            </td>
+          </tr>
+          <tr>
+            <th>직업</th>
+            <td>
+              <select name="position">
+                <option value="student">학생</option>
+                <option value="office">사무직</option>
+                <option value="production">생산직</option>
+                <option value="employee">자영업</option>
+                <option value="none">무직</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>성별</th>
+            <td>
+              <label>
+                <input type="radio" name="gender" value="male" checked />남성
+              </label>
+              <label>
+                <input type="radio" name="gender" value="female" />여성
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <th>이메일</th>
+            <td>
+              <input
+                title="메일 주소를 입력해주세요"
+                type="email"
+                name="email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <th>자기소개</th>
+            <td>
+              <textarea name="intro"></textarea>
+            </td>
+          </tr>
+        </table>
+        <div class="buttons">
+          <input type="submit" value="가입" class="btn" title="가입" />
+          <input
+            type="reset"
+            value="리셋"
+            class="btn"
+            title="처음으로 돌아갑니다"
+          />
+        </div>
+      </form>
+    </div>
+
+    <script src="회원가입폼.js"></script>
+  </body>
+</html>
