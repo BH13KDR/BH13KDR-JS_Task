@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body.dark-mode {
+        background-color: #121212;
+        color: white;
+      }
+      body.dark-mode .form-control,
+      body.dark-mode .form-select {
+        background-color: #1e1e1e;
+        color: white;
+        border-color: #444;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>회원가입</h2>
+        <button id="darkModeBtn" class="btn btn-sm btn-secondary">
+          다크모드
+        </button>
+      </div>
+
+      <form id="signupForm" class="border p-4 rounded bg-light">
+        <div class="mb-3">
+          <label for="userId" class="form-label">아이디</label>
+          <input
+            type="text"
+            class="form-control"
+            id="userId"
+            placeholder="아이디(5자 이상)"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="userPw1" class="form-label">비밀번호</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              id="userPw1"
+              placeholder="비밀번호 (8자 이상)"
+              required
+            />
+            <button class="btn btn-outline-secondary togglePwBtn" type="button">
+              보기
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="userPw2" class="form-label">비밀번호 확인</label>
+          <div class="input-group">
+            <input
+              type="password"
+              class="form-control"
+              id="userPw2"
+              placeholder="비밀번호 확인"
+              required
+            />
+            <button class="btn btn-outline-secondary togglePwBtn" type="button">
+              보기
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="userPhone" class="form-label">전화번호</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="userPhone"
+            placeholder="010-0000-0000"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">성별</label>
+          <select id="userGender" class="form-select">
+            <option value="남성">남성</option>
+            <option value="여성">여성</option>
+            <option value="공용">공용</option>
+          </select>
+        </div>
+
+        <!-- 이메일 -->
+        <div class="mb-3">
+          <label for="userEmail" class="form-label">이메일</label>
+          <div class="input-group">
+            <input
+              type="email"
+              class="form-control"
+              id="userEmail"
+              placeholder="example@mail.com"
+              required
+            />
+            <button
+              class="btn btn-outline-primary"
+              type="button"
+              id="checkEmailBtn"
+            >
+              중복 확인
+            </button>
+          </div>
+          <div id="emailCheckMsg" class="form-text"></div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">가입하기</button>
+      </form>
+    </div>
+    <script src="회원가입폼.js"></script>
+  </body>
+</html>
