@@ -74,4 +74,5 @@ form.addEventListener('submit', function (e) {
   }
 
   alert(`환영합니다! ${userId}님, 회원가입이 완료되었습니다!`);
+  window.location.href = "회원가입완료.html";
 });
